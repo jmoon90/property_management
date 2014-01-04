@@ -1,0 +1,14 @@
+<h1>Add New Owner</h1>
+
+<% if @owner.errors.any? %>
+  <%= flash[:notice] %>
+<% end %>
+
+<%= simple_form_for @owner do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :email_address %>
+  <%= f.input :company_name %>
+
+  <%= f.button :submit %>
+<% end %>

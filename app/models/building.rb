@@ -3,4 +3,8 @@ class Building < ActiveRecord::Base
   validates_presence_of :city
   validates_presence_of :state
   validates_presence_of :postal_code
+
+  belongs_to :owner,
+    dependent: :destroy,
+    inverse_of: :buildings
 end

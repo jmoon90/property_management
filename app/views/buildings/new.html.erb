@@ -6,7 +6,7 @@
 <%= simple_form_for @building do |f| %>
   <%= f.input :street_address %>
   <%= f.input :city %>
-  <%= f.input :state %>
+  <%= f.input :state, collection:(us_states) %>
   <%= f.input :postal_code %>
   <%= f.input :description %>
   <%= f.input :owner_id %>

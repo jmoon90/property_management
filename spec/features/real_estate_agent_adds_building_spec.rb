@@ -3,7 +3,6 @@ require 'spec_helper'
 feature "Real estate agent adds building" do
   scenario 'with invalid input' do
     new_building_path
-
     click_on "submit"
 
     expect(page).to have_content("Invalid information. Please try again")

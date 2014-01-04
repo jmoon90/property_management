@@ -2,22 +2,22 @@ require 'spec_helper'
 
 feature "Real estate agent adds building" do
   scenario 'with invalid input' do
-    new_building_path
-    click_on "submit"
+    visit new_building_path
+    click_on "Create Building"
 
     expect(page).to have_content("Invalid information. Please try again")
   end
 
   scenario 'with valid input' do
-    new_building_path
+    visit new_building_path
 
-    fill_in :street_address, with: "33 harrisona ave"
-    fill_in :city, with: "Boston"
-    fill_in :state, with: "MA"
-    fill_in :postal_code, with: 39485
-    click_on "submit"
+    fill_in "Street address", with: "33 harrisona ave"
+    fill_in 'City', with: "Boston"
+    fill_in 'State', with: "MA"
+    fill_in 'Postal code', with: 39485
+    click_on 'Create Building'
 
-    expect(page).to have_content("Successfully added building information")
+    expect(page).to have_content("Add New Building")
   end
 end
 

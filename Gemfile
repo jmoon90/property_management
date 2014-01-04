@@ -34,6 +34,8 @@ end
 
 gem 'simple_form'
 
+gem 'country_select'
+
 group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'

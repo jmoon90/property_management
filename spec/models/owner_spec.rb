@@ -5,5 +5,5 @@ describe Owner do
   it { should validate_presence_of :last_name }
   it { should validate_presence_of :email_address }
 
-  it { should have_many(:buildings) }
+  it { should have_many(:buildings).dependent(:nullify) }
 end

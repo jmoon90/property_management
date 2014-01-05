@@ -12,7 +12,7 @@ feature "Real estate agent adds building" do
     visit new_building_path
     fill_in "Street address", with: "33 harrisona ave"
     fill_in 'City', with: "Boston"
-    fill_in 'State', with: "MA"
+    select 'Alabama', from: "State"
     fill_in 'Postal code', with: 39485
     click_on 'Create Building'
 
@@ -25,7 +25,7 @@ feature "Real estate agent adds building" do
     owner_buildings = owner.buildings.count
     fill_in "Street address", with: "33 harrisona ave"
     fill_in 'City', with: "Boston"
-    fill_in 'State', with: "MA"
+    select 'Alabama', from: "State"
     fill_in 'Postal code', with: 39485
     fill_in 'Owner', with: owner.id
     click_on 'Create Building'
